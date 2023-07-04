@@ -1,6 +1,6 @@
 # Jogo da Velha
 
-##Tela Inicial
+## Tela Inicial
 <img src="imagens/tela_inicial.jpg"/>
 <p>Nessa tela é idenficado os jogadores que participarão do jogo.</p>
 
