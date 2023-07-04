@@ -9,8 +9,12 @@ document.addEventListener('DOMContentLoaded',()=>{
      let btn = document.querySelector('#btn');
      btn.addEventListener('click',()=>{
         jogadores = document.querySelectorAll('.jogador');
-        telaPreta = document.querySelector('#jogadores')
-        telaPreta.style.display = 'none';
+        if(jogadores[0].value == '' || jogadores[1].value == ''){
+            alert('Para iniciar, digite os nomes dos jogadores!!!')
+        }else{
+            telaPreta = document.querySelector('#jogadores')
+            telaPreta.style.display = 'none';
+        }
      })
      let btn_reiniciar = document.querySelector('#btn_reiniciar');
         btn_reiniciar.addEventListener('click', ()=>{
