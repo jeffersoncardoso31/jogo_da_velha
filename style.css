@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font: normal 40px Arial;
+}
+:root{
+    --quadrado: 3.8rem;
+}
+body{
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    max-width: 30rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+h1{
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 700;
+    color: white;
+    filter: drop-shadow(5px 5px 3px black);
+}
+.tabuleiro{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap: 0.2rem;
+}
+.quadrado{
+    width: var(--quadrado);
+    height: var(--quadrado);
+    border: none;
+    background-color: aqua;
+    box-shadow: 0px 0px 5px 10px black;
+}
+.quadrado:active{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 10px aqua
+}
+.quadrado > p{
+    font-size: 2.5rem;
+    color: white;
+}
+#jogadores{
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+}
+.vencedor{
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.9;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+#parabens p{
+    color: yellow;
+    font-size: 2rem;
+}
+.jogador{
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+    margin: .2rem;
+    font: italic 1.3rem Arial;
+    font-weight: bold;
+    color: orange;
+}
+
+#btn,#btn_reiniciar{
+    width: 5rem;
+    padding: .5rem;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#btn,#btn_reiniciar:active{
+    transform: scale(1.2);
+}
+@media(max-width:800px){
+    *{
+        font-size: 25px;
+    }
+    #parabens p{
+        color: yellow;
+        font-size: 1.3rem;
+    }
+}
